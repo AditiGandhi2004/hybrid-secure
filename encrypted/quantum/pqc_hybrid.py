@@ -1,13 +1,7 @@
 """
 pqc_hybrid.py
 
-Hybrid encryption using X25519 (Elliptic-curve Diffie-Hellman) + AES-GCM symmetric encryption.
-This is NOT post-quantum cryptography (PQC). It's a practical, cross-platform hybrid
-scheme that works on Windows with Python 3.10 and the 'cryptography' package only,
-so it will run in PowerShell without WSL.
 
-If you need true PQC KEMs (Kyber, NTRU, etc.), you'll need a library such as liboqs and
-python bindings (oqs), which require building native libraries on Windows. See README.md.
 
 Usage (example):
     from pqc_hybrid import generate_keypair, encrypt, decrypt, encode_public_key, decode_public_key
